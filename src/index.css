@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Noto+Sans+Sinhala:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap');
+
+:root {
+  --primary-dark-blue: #0A192F;
+  --secondary-blue: #112240;
+  --accent-red: #D90429;
+  --accent-red-hover: #EF233C;
+  --bg-light: #F8F9FA;
+  --white: #FFFFFF;
+  --text-main: #2B2D42;
+  --text-muted: #6C757D;
+  --border-color: #DEE2E6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Sinhala', 'Noto Sans Tamil', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header & Language Selector */
+.header {
+  background-color: var(--primary-dark-blue);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lang-selector {
+  display: flex;
+  gap: 15px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.2);
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover, .lang-btn.active {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px 50px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.counter-wrapper {
+  margin-bottom: 40px;
+}
+
+.signature-count {
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: var(--accent-red);
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.signature-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-dark-blue);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--primary-dark-blue);
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.6rem;
+  color: var(--text-muted);
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-weight: 400;
+}
+
+.cta-button {
+  background: var(--accent-red);
+  color: var(--white);
+  border: none;
+  padding: 20px 50px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(217, 4, 41, 0.4);
+}
+
+.cta-button:hover {
+  background: var(--accent-red-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(217, 4, 41, 0.5);
+}
+
+/* Content Section */
+.content-section {
+  padding: 70px 20px;
+  background: var(--bg-light);
+}
+
+.content-paragraph {
+  font-size: 1.3rem;
+  margin-bottom: 28px;
+  color: var(--text-main);
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* Form Section */
+.form-section {
+  padding: 80px 20px;
+  background: var(--white);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.petition-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-light);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.form-title {
+  font-size: 2.8rem;
+  color: var(--primary-dark-blue);
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  font-family: inherit;
+  transition: all 0.3s;
+  background: var(--white);
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-dark-blue);
+  box-shadow: 0 0 0 4px rgba(10, 25, 47, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 35px 0;
+  background: rgba(10, 25, 47, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.checkbox-group input {
+  margin-top: 4px;
+  width: 24px;
+  height: 24px;
+  accent-color: var(--primary-dark-blue);
+}
+
+.checkbox-group label {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--primary-dark-blue);
+  color: var(--white);
+  border: none;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(10, 25, 47, 0.2);
+}
+
+.submit-btn:hover {
+  background: var(--secondary-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10, 25, 47, 0.3);
+}
+
+.submit-btn:disabled {
+  background: var(--text-muted);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Status Messages */
+.status-msg {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.status-success {
+  background: #D4EDDA;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-error {
+  background: #F8D7DA;
+  color: #721C24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Supporters Section */
+.supporters-section {
+  padding: 80px 20px;
+  background: var(--bg-light);
+}
+
+.supporters-title {
+  font-size: 2.8rem;
+  color: var(--primary-dark-blue);
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.supporters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.supporter-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.04);
+  border-top: 5px solid var(--accent-red);
+  transition: transform 0.3s;
+}
+
+.supporter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.supporter-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-dark-blue);
+  margin-bottom: 8px;
+}
+
+.supporter-country {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.supporter-reason {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-main);
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .signature-count {
+    font-size: 4rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .lang-btn {
+    font-size: 1.1rem;
+    padding: 8px 15px;
+  }
+  .petition-form {
+    padding: 25px;
+  }
+  .form-title {
+    font-size: 2.2rem;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
